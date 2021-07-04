@@ -33,10 +33,17 @@ function hotelCost(day) {
         return thirdPart;
     }
 }
-// 1-10=100
-// 11-20=80
-// 21-=50
 
-// megaFriend
-var cost = hotelCost(7);
-console.log(cost);
+// megaFriend: How to find largest friend name
+function megaFriend(friendList) {
+    var largest = friendList[0];
+    if (friendList.length == 0) {
+        return 'ATTENTION! List is Empty';
+    }
+    for (var i = 0; i < friendList.length; i++) {
+        if (largest.length < friendList[i].length) {
+            largest = friendList[i];
+        }
+    }
+    return largest;
+}
